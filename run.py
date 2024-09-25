@@ -4,7 +4,10 @@ from flask import Flask, render_template, request, flash
 if os.path.exists("env.py"):
     import env
 
+
 app = Flask(__name__)
+if __name__ == "__main__":
+    app.run()
 app.secret_key = os.environ.get("SECRET_KEY")
 
 
